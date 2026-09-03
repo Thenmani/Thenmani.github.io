@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
+  <title>Software Engineer Name — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -27,6 +27,8 @@
 
     html { scroll-behavior: smooth; }
 
+    #top, #projects, #contact { scroll-margin-top: 5.5rem; }
+
     body {
       font-family: var(--sans);
       background: var(--navy);
@@ -42,7 +44,7 @@
       top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       padding: 1.1rem 2rem;
       background: rgba(10,15,30,0.88);
@@ -92,9 +94,9 @@
 
     /* ── PAGE WRAPPER ── */
     .page {
-      max-width: 1200px;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 0 3rem;
+      padding: 0 3rem 0 1.25rem;
     }
 
     /* ── PROFILE HEADER ── */
@@ -102,7 +104,7 @@
       display: flex;
       align-items: center;
       gap: 1.8rem;
-      padding: 8rem 0 3rem;
+      padding: 4.2rem 0 2.2rem;
     }
 
     .profile-pic-placeholder {
@@ -157,10 +159,10 @@
     /* ── MAIN SPLIT ── */
     .main-split {
       display: grid;
-      grid-template-columns: 1fr 1.8fr;
-      gap: 4rem;
+      grid-template-columns: 340px 1fr;
+      gap: 2.5rem;
       align-items: start;
-      padding-bottom: 5rem;
+      padding-bottom: 1rem;
     }
 
     /* ── LEFT: ABOUT ── */
@@ -168,27 +170,27 @@
       font-size: 1.7rem;
       font-weight: 600;
       color: var(--text);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .about-para {
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.85;
-      margin-bottom: 1rem;
+      font-size: 1.12rem;
+      line-height: 1.65;
+      margin-bottom: 0.9rem;
     }
 
     .about-actions {
-      margin-top: 1.8rem;
+      margin-top: 1.3rem;
       display: flex;
       flex-direction: column;
-      gap: 0.9rem;
+      gap: 0.8rem;
       align-items: flex-start;
     }
 
     .btn-primary {
       font-family: var(--mono);
-      font-size: 0.85rem;
+      font-size: 0.92rem;
       background: var(--cyan);
       color: var(--navy);
       border: none;
@@ -205,12 +207,12 @@
     .contact-inline {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.45rem;
     }
 
     .contact-inline a {
       font-family: var(--mono);
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: var(--muted);
       text-decoration: none;
       display: flex;
@@ -272,7 +274,7 @@
 
     .skill-card-title {
       font-family: var(--mono);
-      font-size: 0.68rem;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--cyan);
       letter-spacing: 0.06em;
@@ -297,18 +299,27 @@
       letter-spacing: 0.02em;
     }
 
+    .degree-line {
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow-x: auto;
+      padding-bottom: 2rem;
+    }
+
     /* ── DIVIDER ── */
     .divider {
       width: 100%;
       height: 1px;
       background: var(--border);
-      max-width: 1200px;
+      max-width: 1440px;
       margin: 0 auto;
     }
 
     /* ── PROJECTS ── */
     .projects-section {
-      max-width: 1200px;
+      max-width: 1440px;
       margin: 0 auto;
       padding: 2.5rem 2rem;
     }
@@ -466,7 +477,7 @@
       font-family: var(--mono);
       font-size: 0.78rem;
       color: var(--muted);
-      max-width: 1200px;
+      max-width: 1440px;
       margin: 0 auto;
     }
 
@@ -492,19 +503,30 @@
       .projects-section { padding: 4rem 1.2rem; }
       .project-card { grid-template-columns: 1fr; }
       .project-arrow { display: none; }
+      .degree-line { white-space: normal; overflow-x: visible; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; }
       .btn-primary:hover, .skill-card:hover, .project-card:hover { transform: none; }
     }
+
+    /* ...all your existing CSS rules above... */
+    footer a {
+      color: #87ceeb;
+      text-decoration: underline;
+    }
+    footer a:hover {
+    color: #a9ddf3;
+    }
+
+  </style>
   </style>
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
-    <a href="#top" class="nav-logo">YN.dev</a>
     <ul class="nav-links">
       <li><a href="#top">About</a></li>
       <li><a href="#top">Expertise</a></li>
@@ -517,12 +539,11 @@
   <div class="page" id="top">
 
     <!-- Profile header -->
-    <div class="profile-header reveal">
-      <div class="profile-pic-placeholder" title="Click to add your photo">+</div>
+    <div class="profile-header reveal">      
       <div class="profile-text">
-        <h1>Your Name</h1>
+        <h1>Thenmani Sayebaba</h1>
         <p class="role">
-          <strong>Software Engineer</strong> &nbsp;·&nbsp; Data &amp; AI &nbsp;·&nbsp; Product Thinker
+          <strong>Software Engineer</strong> &nbsp;·&nbsp; Applied AI, Data &amp; ML &nbsp;·&nbsp; Product Thinker
         </p>
       </div>
     </div>
@@ -534,7 +555,7 @@
       <div class="split-about reveal">
         <h2>About</h2>
         <p class="about-para">
-          I'm a versatile technologist who operates across the full product lifecycle — from shaping requirements and prototyping interfaces to engineering scalable data infrastructure and shipping production AI systems.
+        A versatile technologist who operates across the full product lifecycle — from shaping requirements and prototyping interfaces to engineering scalable data infrastructure and shipping production AI systems.
         </p>
         <p class="about-para">
           I believe the best products emerge when technical rigor and user empathy are treated as equally important constraints.
@@ -542,16 +563,15 @@
         <div class="about-actions">
           <a href="#projects" class="btn-primary">View my work</a>
           <div class="contact-inline">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+            <a href="https://linkedin.com/in/thenmanisayebaba" target="_blank" rel="noopener">
               <span class="contact-icon">in</span>
-              linkedin.com/in/yourprofile
+              linkedin.com/in/thenmanisayebaba
             </a>
-            <a href="https://github.com/gitusername" target="_blank" rel="noopener">
+            <a href="https://github.com/Thenmani" target="_blank" rel="noopener">
               <span class="contact-icon">gh</span>
-              github.com/gitusername
+              github.com/Thenmani
             </a>
           </div>
-          <p style="margin-top:0.9rem;font-family:var(--mono);font-size:0.8rem;color:#ffffff;">🎓 MS in Information Systems — Artificial Intelligence Track · FIU · Dec 2026</p>
         </div>
       </div>
 
@@ -564,7 +584,15 @@
             <div class="skill-card-icon">🖥️</div>
             <p class="skill-card-title">Software Engineering</p>
             <div class="skill-tags">
-              <span class="tag">Python</span><span class="tag">Java</span><span class="tag">REST API</span><span class="tag">Git</span><span class="tag">Mockito</span><span class="tag">PyCharm</span><span class="tag">Postman</span>
+              <span class="tag">Python</span><span class="tag">Java</span><span class="tag">REST API</span><span class="tag">FastAPI</span><span class="tag">Node.js</span><span class="tag">Git</span><span class="tag">CI/CD</span><span class="tag">Mockito</span><span class="tag">Docker</span><span class="tag">PyCharm</span><span class="tag">Visual Studio</span><span class="tag">Postman</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-icon">📊</div>
+            <p class="skill-card-title">Applied AI Engineering</p>
+            <div class="skill-tags">
+              <span class="tag">Anthropic API</span><span class="tag">Gemini API</span><span class="tag">Groq API</span><span class="tag">Claude Code</span><span class="tag">Claude Cowork</span><span class="tag">RAG</span><span class="tag">AI Agents</span><span class="tag">Prompt Engineering</span><span class="tag">NLP</span>
             </div>
           </div>
 
@@ -572,31 +600,23 @@
             <div class="skill-card-icon">🎨</div>
             <p class="skill-card-title">UI Prototyping</p>
             <div class="skill-tags">
-              <span class="tag">Figma</span><span class="tag">LucidChart</span><span class="tag">Gradio</span><span class="tag">AI Powered UI</span>
+              <span class="tag">AI-powered UI</span><span class="tag">Claude Design</span><span class="tag">Gradio</span><span class="tag">Figma</span><span class="tag">React</span><span class="tag">JavaScript</span>   
             </div>
           </div>
 
           <div class="skill-card">
             <div class="skill-card-icon">🔁</div>
-            <p class="skill-card-title">Data Engineering</p>
+            <p class="skill-card-title">Data Engineering, Data Science</p>
             <div class="skill-tags">
-              <span class="tag">SQL</span><span class="tag">Oracle Apex</span><span class="tag">BigQuery</span><span class="tag">Supabase</span><span class="tag">ETL</span><span class="tag">Data Modeling</span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <div class="skill-card-icon">📊</div>
-            <p class="skill-card-title">Data Science / Statistical Analysis</p>
-            <div class="skill-tags">
-              <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">SciPy</span><span class="tag">Seaborn</span><span class="tag">Matplotlib</span>
+              <span class="tag">SQL</span><span class="tag">Oracle Apex</span><span class="tag">BigQuery</span><span class="tag">Supabase</span><span class="tag">SQLite</span><span class="tag">ETL</span><span class="tag">Data Modeling</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">SciPy</span><span class="tag">Seaborn</span><span class="tag">Matplotlib</span><span class="tag">Google Colab</span><span class="tag">A/B Testing</span>
             </div>
           </div>
 
           <div class="skill-card">
             <div class="skill-card-icon">⚡</div>
-            <p class="skill-card-title">Applied AI / ML</p>
+            <p class="skill-card-title">Machine Learning</p>
             <div class="skill-tags">
-              <span class="tag">Anthropic</span><span class="tag">Groq API</span><span class="tag">RAG</span><span class="tag">Prompt Engineering</span><span class="tag">Gradio</span><span class="tag">Google Colab</span>
+              <span class="tag">Linear Regression</span><span class="tag">Logistic Regression</span><span class="tag">Clustering Techniques</span><span class="tag">Neural Network</span><span class="tag">TensorFlow</span>
             </div>
           </div>
 
@@ -604,73 +624,96 @@
             <div class="skill-card-icon">🧭</div>
             <p class="skill-card-title">Agile / Product Management</p>
             <div class="skill-tags">
-              <span class="tag">Scrum</span><span class="tag">Kanban</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Smartsheet</span><span class="tag">Stakeholder Communications</span>
+              <span class="tag">Scrum</span><span class="tag">Kanban</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Smartsheet</span><span class="tag">LucidChart</span><span class="tag">User stories</span><span class="tag">Requirements Analysis & Prioritization</span><span class="tag">AI Strategy</span>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
+
+    <p class="degree-line">🎓 MS in Information Systems — Artificial Intelligence Track · FIU · Dec 2026</p>
   </div>
-
   <div class="divider"></div>
-
   <!-- PROJECTS -->
   <div class="projects-section" id="projects">
-    <p class="section-label reveal">Work</p>
-    <h2 class="section-title reveal">Selected projects</h2>
+    <h2 class="section-title reveal">Projects</h2>
     <div class="projects-list">
 
-      <a href="#" class="project-card reveal">
-        <div>
-          <p class="project-domain">Data Engineering · ML</p>
-          <p class="project-name">Real-Time Demand Forecasting Pipeline</p>
-          <p class="project-desc">Built an end-to-end streaming data pipeline ingesting 10M+ events/day, feeding an XGBoost forecasting model deployed via FastAPI. Reduced inventory overstock by 18%.</p>
-          <div class="skill-tags">
-            <span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">XGBoost</span><span class="tag">FastAPI</span><span class="tag">GCP</span>
-          </div>
+      <div class="project-card reveal">
+      <div>
+        <p class="project-name">AI assisted IT ticket resolution system</p>
+        <p class="project-desc">AI assisted IT helpdesk ticketing system that uses Claude AI to validate, categorize, and generate solutions for employee-submitted tickets via Gradio web UI. Includes a full technician review workflow, senior escalation path, and a leadership analytics dashboard with AI-powered pulsecheck.</p>
+        <div class="skill-tags">
+          <a class="tag" href="https://github.com/Thenmani/IT-Helpdesk-AI" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="tag" href="https://ithelpdesk-ai-619992614237.us-east1.run.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
         </div>
-        <span class="project-arrow">→</span>
-      </a>
+      </div>
+      </div>
 
-      <a href="#" class="project-card reveal">
-        <div>
-          <p class="project-domain">Applied AI · Software Engineering</p>
-          <p class="project-name">LLM-Powered Document Intelligence Tool</p>
-          <p class="project-desc">Designed and shipped an internal tool for automated document classification and extraction using RAG architecture, cutting manual review time by 60%.</p>
-          <div class="skill-tags">
-            <span class="tag">LangChain</span><span class="tag">OpenAI</span><span class="tag">React</span><span class="tag">PostgreSQL</span>
-          </div>
+      <div class="project-card reveal">
+      <div>
+        <p class="project-name">AI for good cause challenge</p>
+        <p class="project-desc">Health Equity Intelligence platform with 'Need Score, Impact Score and Year over Year Trend Chart' that helps FSF to effectively take data driven decisions on food insecurity and food distribution efficiency relative to its population across four counties.</p>
+        <div class="skill-tags">
+          <a class="tag" href="https://github.com/Thenmani/FSF-FoodAccess-HealthEquityMap" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="tag" href="https://aiforgoodcause-healthequitymap.web.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
         </div>
-        <span class="project-arrow">→</span>
-      </a>
+      </div>
+      </div>
 
-      <a href="#" class="project-card reveal">
-        <div>
-          <p class="project-domain">Data Science · Product</p>
-          <p class="project-name">A/B Testing Framework &amp; Analytics Platform</p>
-          <p class="project-desc">Owned the design and rollout of a self-serve experimentation platform for a 50-person product org. Standardized experiment design, analysis, and reporting across 3 teams.</p>
-          <div class="skill-tags">
-            <span class="tag">Python</span><span class="tag">dbt</span><span class="tag">Looker</span><span class="tag">Bayesian Stats</span>
-          </div>
+      <div class="project-card reveal">
+      <div>
+        <p class="project-name">FIU RAG Course Guide</p>
+        <p class="project-desc">A RAG (Retrieval-Augmented Generation) system that makes student generated casual information about FIU courses searchable and answerable, so that students can make informed decisions about college course selection, majors and career paths. Built and deployed live Gemini -powered answer engine on Google Cloud.</p>
+        <div class="skill-tags">
+          <a class="tag" href="https://github.com/Thenmani/ai201-project1-unofficial-guide-starter" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="tag" href="https://rag-course-guide-fiu-670104592730.us-east1.run.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
         </div>
-        <span class="project-arrow">→</span>
-      </a>
-
-      <a href="#" class="project-card reveal">
-        <div>
-          <p class="project-domain">UI Prototyping · Agile</p>
-          <p class="project-name">Zero-to-One SaaS Dashboard</p>
-          <p class="project-desc">Led product and engineering for a greenfield analytics dashboard from discovery to beta. Conducted user research, built Figma prototypes, and shipped the React frontend.</p>
-          <div class="skill-tags">
-            <span class="tag">Figma</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">User Research</span>
-          </div>
+      </div>
+      </div>
+      
+      <div class="project-card reveal">
+      <div>
+        <p class="project-name">ML-Alphanumeric Reader</p>
+        <p class="project-desc">An automatic number plate recognition prototype: a CNN character classifier trained on EMNIST, a custom connected-components segmentation pipeline, and a cost-based confidence threshold that decides when to auto-accept a read versus route it to a human. </p>
+        <div class="skill-tags">
+          <a class="tag" href="https://github.com/Thenmani/NumberPlateReadingApp" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="tag" href="https://number-plate-reading-app-751134877151.us-east1.run.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
         </div>
-        <span class="project-arrow">→</span>
-      </a>
+      </div>
+      </div>
 
-    </div>
+      <div class="project-card reveal">
+      <div>
+        <p class="project-name">Predictive modeling: Linear & Logistic Regression</p>
+        <p class="project-desc">Built and evaluated a linear regression model to predict car prices from vehicle features, and a logistic regression model to classify admission outcomes, covering data preprocessing, feature selection via backward elimination, and model evaluation with standard ML metrics.</p>
+        <div class="skill-tags">
+          <a class="tag" href="https://github.com/Thenmani/Linear-And-Logistic-Regression-Analysis" target="_blank" rel="noopener noreferrer">GitHub</a>
+         </div>
+      </div>
+      </div>
+
+      <div class="project-card reveal">
+      <div>
+        <p class="project-name">Tokenizers & Autoregression: NLK to GPT-2</p>
+        <p class="project-desc">NLTK's linguistically-aware word and sentence tokenizers, and the real Byte-Pair Encoding (BPE) tokenizer used by GPT-2 to process text given to LLM. It also demonstrates autoregressive text generation, to predict the next token by feeding each prediction back in as input, using GPT-2's actual pre-trained neural network.</p>
+        <div class="skill-tags">
+          <a class="tag" href="https://github.com/Thenmani/Tokenization-Autoregression" target="_blank" rel="noopener noreferrer">GitHub</a>
+         </div>
+      </div>
+      </div>
+
+      <div class="project-card reveal">
+      <div>
+        <p class="project-name">Statistical analysis data pipeline</p>
+        <p class="project-desc">Full statistical analysis data pipeline: Data Cleaning, Outlier detection using Z-Score and IQR, Feature Scaling, Correlation and Confidence Interval Analysis and data visualization with Python</p>
+        <div class="skill-tags">
+          <a class="tag" href="https://github.com/Thenmani/Statistical-Analysis-Pipeline" target="_blank" rel="noopener noreferrer">GitHub</a>
+         </div>
+      </div>
+      </div>
+
+      </div>
   </div>
 
   <div class="divider"></div>
@@ -681,13 +724,13 @@
     <div class="reveal">
       <p style="font-size:0.95rem;color:var(--muted);margin-bottom:1.4rem;">Open to the right opportunity — full-time or contract.</p>
       <div style="display:flex;flex-direction:column;gap:0.7rem;">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.8rem;font-family:var(--mono);font-size:0.85rem;color:var(--muted);text-decoration:none;transition:color 0.25s ease;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">
+        <a href="https://linkedin.com/in/thenmanisayebaba" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.8rem;font-family:var(--mono);font-size:0.85rem;color:var(--muted);text-decoration:none;transition:color 0.25s ease;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">
           <span style="width:32px;height:32px;border-radius:6px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:0.75rem;flex-shrink:0;">in</span>
-          linkedin.com/in/yourprofile
+          linkedin.com/in/thenmanisayebaba
         </a>
-        <a href="https://github.com/gitusername" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.8rem;font-family:var(--mono);font-size:0.85rem;color:var(--muted);text-decoration:none;transition:color 0.25s ease;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">
+        <a href="https://github.com/Thenmani" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.8rem;font-family:var(--mono);font-size:0.85rem;color:var(--muted);text-decoration:none;transition:color 0.25s ease;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">
           <span style="width:32px;height:32px;border-radius:6px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:0.75rem;flex-shrink:0;">gh</span>
-          github.com/gitusername
+          github.com/Thenmani
         </a>
       </div>
     </div>
@@ -697,7 +740,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>Designed &amp; built by <span>Your Name</span> &nbsp;·&nbsp; <span>gitusername</span>.github.io</p>
+    <p>Designed &amp; built by <span>Thenmani</span> &nbsp;·&nbsp; <a href="https://thenmani.github.io" target="_blank">Thenmani.github.io</a></p>
   </footer>
 
   <script>
